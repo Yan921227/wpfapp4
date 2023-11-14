@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace WpfApp4
 {
@@ -11,5 +12,12 @@ namespace WpfApp4
         {
             InitializeComponent();
         }
+
+        private void openButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("開啟新文件");
+        }
+
+        
     }
 }
