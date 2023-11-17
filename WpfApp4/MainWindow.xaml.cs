@@ -15,7 +15,8 @@ namespace WpfApp4
 
         private void openButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("開啟新文件");
+            MyDocumentViewer myDocumentViewer  = new MyDocumentViewer();
+            myDocumentViewer.Show();
         }
 
         
