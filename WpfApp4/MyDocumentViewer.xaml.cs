@@ -16,7 +16,7 @@ namespace WpfApp4
         public void New_Executed(object sender,
           System.Windows.Input.ExecutedRoutedEventArgs e)
         {
-            MyDocumentViewer myDocumentViewer = new MyDocumentViewer();
+            MyDocumentViewer myDocumentViewer = new MyDocumentViewer(); 
             myDocumentViewer.Show();
         
         }
