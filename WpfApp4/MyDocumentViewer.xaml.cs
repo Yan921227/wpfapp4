@@ -21,7 +21,7 @@ namespace WpfApp4
         
         }
 
-        private void Open_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e)
+        private void Open_Executed(object sender, System.Windows.Input.ExecutedRoutedEventArgs e) 
         {
             MessageBox.Show("Open");
         }

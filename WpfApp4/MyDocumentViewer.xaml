@@ -54,7 +54,7 @@
                 </ToggleButton>
             </ToolBar>
         </ToolBarTray>
-        <RichTextBox x:Name="rtbEditor" Background="#FFE8E9D8" >
+        <RichTextBox x:Name="rtbEditor" Background="#FFE8E9D8" SelectionChanged="rtbEditor_SelectionChanged" >
             <FlowDocument/>   <!--文件內容 -->
         </RichTextBox>
 
