@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:WpfApp4"
         mc:Ignorable="d"
         Title="MyDocumentViewer" Height="450" Width="800">
@@ -20,7 +21,7 @@
     </Window.CommandBindings>
     <DockPanel>
         <ToolBarTray DockPanel.Dock="Top" VerticalAlignment="Top" 
-          HorizontalAlignment="Left" Height="40" Width="500" > 
+          HorizontalAlignment="Left" Height="40" Width="700" > 
             <ToolBar x:Name="ApplicationToolBar" Height ="40" Width="180" >
                 <Button x:Name="newButton" Command="ApplicationCommands.New"  Height="35" Width="35" > 
                     <Image Height="30" Width="30" VerticalAlignment="Center" 
@@ -39,7 +40,7 @@
                   HorizontalAlignment="Center"  Source="/trash.png" />
                 </Button>
             </ToolBar>
-            <ToolBar x:Name="EditingToolBar" Height ="40" Width="150" >
+            <ToolBar x:Name="EditingToolBar" Height ="40" Width="500" >
                 <ToggleButton x:Name="boldButton" Height="35" Width="35" Command="EditingCommands.ToggleBold" >
                     <Image Height="30" Width="30" VerticalAlignment="Center" 
                HorizontalAlignment="Center"  Source="/bold.png" />
@@ -52,6 +53,9 @@
                     <Image Height="30" Width="30" VerticalAlignment="Center" 
                    HorizontalAlignment="Center"  Source="/underline.png" />
                 </ToggleButton>
+                <xctk:ColorPicker x:Name="fontColorPicker" Width="90" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" DisplayColorAndName="True" SelectedColorChanged="fontColorPicker_SelectionChanged"  />
+                <ComboBox x:Name="fontFamilyComboBox" Width="90" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" SelectionChanged="fontFamilyComboBox_SelectionChanged"  />
+                <ComboBox x:Name="fontSizeComboBox" Width="50" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" SelectionChanged="fontFamilyComboBox_SelectionChanged" />
             </ToolBar>
         </ToolBarTray>
         <RichTextBox x:Name="rtbEditor" Background="#FFE8E9D8" SelectionChanged="rtbEditor_SelectionChanged" >
